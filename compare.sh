@@ -1,0 +1,1 @@
+compare 'tmp/firefox_selenium.png' 'tmp/chrome_selenium.png' 'out/comparison.png'

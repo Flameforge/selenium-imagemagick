@@ -19,12 +19,14 @@ const test2 = () => {
 function searchTest(driver, browser) {
   driver.get('https://www.zeppelin.com/de.html')
 
+  setTimeout(()=> {
     driver.takeScreenshot().then(function (image, err) {
-        fs.writeFile('./tmp/' + browser + '_selenium.png', image, 'base64', function (err) {
-        driver.quit()
-        console.log(err)
-        })
-    })
+      fs.writeFile('./tmp/' + browser + '_selenium.png', image, 'base64', function (err) {
+      driver.quit()
+      console.log(err)
+      })
+  })
+  }, 5000)
 
 }
 
